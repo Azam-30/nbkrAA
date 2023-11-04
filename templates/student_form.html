@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Create or Update Student</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      form input {
+        margin-bottom: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="text-align: center">
+      <h1>Create or Update Student</h1>
+      <a href="{% url 'logout'%}" style="margin-left: 85%; margin-top: 10px;margin-bottom: 25px; " class="btn btn-dark">Logout</a>
+      <form method="post">
+        {% csrf_token %}
+        <label for="roll_no">Roll No:</label>
+        <input
+          type="text"
+          name="roll_no"
+          value="{{ student.roll_no|default:'' }}"
+          required
+        /><br />
+        <label for="assignment1">Assignment 1:</label>
+        <input
+          type="text"
+          name="assignment1"
+          value="{{ student.assignment1|default:'' }}"
+          required
+        /><br />
+        <label for="assignment2">Assignment 2:</label>
+        <input
+          type="text"
+          name="assignment2"
+          value="{{ student.assignment2|default:'' }}"
+          required
+        /><br />
+        <label for="assignment3">Assignment 3:</label>
+        <input
+          type="text"
+          name="assignment3"
+          value="{{ student.assignment3|default:'' }}"
+          required
+        /><br />
+        <label for="assignment4">Assignment 4:</label>
+        <input
+          type="text"
+          name="assignment4"
+          value="{{ student.assignment4|default:'' }}"
+          required
+        /><br />
+        <label for="assignment5">Assignment 5:</label>
+        <input
+          type="text"
+          name="assignment5"
+          value="{{ student.assignment5|default:'' }}"
+          required
+        /><br />
+        <label for="assignment6">Assignment 6:</label>
+        <input
+          type="text"
+          name="assignment6"
+          value="{{ student.assignment6|default:'' }}"
+          required
+        /><br />
+        <!-- Repeat for other assignments -->
+        <input
+          class="btn btn-success"
+          role="button"
+          type="submit"
+          value="Save"
+        />
+      </form>
+      <a href="{% url 'student_list' %}">Back to Student List</a>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"
+    ></script>
+  </body>
+</html>
