@@ -13,7 +13,7 @@ document.getElementById("loadData").addEventListener("click", function () {
     .then((buffer) => readXlsxFile(new Uint8Array(buffer)))
     .then((data) =>
      {
-      console.log(data); 
+      //console.log(data); 
       let table = document.getElementById("tbl-data");
       let messageDiv = document.getElementById("message");
       table.innerHTML = ""; // Clear existing table data
